@@ -11,11 +11,14 @@
 <body style="margin-top:4%" class="container">
 
     {{template "navbar" .}}
+
+    {{range .topics}}
     <div class="page-header">
-        <h1>我的第一篇博客</h1>
-        <h6 class="text-muted">文章发表于 2019-7-30</h6>
-        <p>大家好，这是我的第一篇博客</p>
+        <h1>{{.Title}}</h1>
+        <h6 class="text-muted">文章发表于 {{.Created}} 共有 {{.Views}}次浏览 {{.ReplyCount}}个评论</h6>
+        <p>{{.Content}}</p>
     </div>
+    {{end}}
 
     <script src="/static/js/jquery.min.js"></script>
     <script src="/static/js/bootstarp.min.js"></script>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <link rel="shortcut icon" href="/static/img/icon.png">
+    <link rel="stylesheet" href="/static/css/bootstrap.min.css">
+    <title>添加文章 - 我的 beego 博客</title>
+</head>
+
+<body style="margin-top:6%" class="container">
+
+    {{template "navbar" .}}
+        
+    <form action="/topic" method="POST" role="form">
+        <legend>添加文章</legend>
+    
+        <div class="form-group">
+            <label>文章标题:</label>
+            <input type="text" class="form-control" placeholder="Enter topic title" name="title">
+        </div>
+
+        <div class="form-group">
+            <label>文章内容:</label>
+            <textarea name="content" class="form-control" rows="10" cols="30" style="resize:none" placeholder="Enter topic content"></textarea>
+        </div>
+    
+        <button type="submit" class="btn btn-success" style="width: 25%">添加文章</button>
+    </form>
+    
+
+
+
+    <script src="/static/js/jquery.min.js"></script>
+    <script src="/static/js/bootstarp.min.js"></script>
+
+</body>
+
+</html>

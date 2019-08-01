@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <link rel="shortcut icon" href="/static/img/icon.png">
+    <link rel="stylesheet" href="/static/css/bootstrap.min.css">
+    <title>{{.topic.Title}} - 我的 beego 博客</title>
+</head>
+
+<body style="margin-top:6%" class="container">
+
+    {{template "navbar" .}}
+        
+    <legend>{{.topic.Title}}<a href="/topic/modify?tid={{.tid}}" style="font-size: 15px;margin-left: 3%">modify</a></legend>
+    {{.topic.Content}}
+
+    <script src="/static/js/jquery.min.js"></script>
+    <script src="/static/js/bootstarp.min.js"></script>
+
+</body>
+
+</html>
